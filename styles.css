@@ -150,6 +150,14 @@ body {
     box-shadow: 0 10px 20px rgba(102, 126, 234, 0.4);
 }
 
+.btn-primary.btn-following {
+    background: #4CAF50;
+}
+
+.btn-primary.btn-following:hover {
+    background: #45a049;
+}
+
 .btn-secondary {
     background: #ffffff;
     color: #667eea;

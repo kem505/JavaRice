@@ -7,21 +7,22 @@ document.addEventListener('DOMContentLoaded', function() {
     followBtn.addEventListener('click', function() {
         if (this.textContent === 'Follow') {
             this.textContent = 'Following';
-            this.style.background = '#4CAF50';
+            this.classList.add('btn-following');
         } else {
             this.textContent = 'Follow';
-            this.style.background = 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)';
+            this.classList.remove('btn-following');
         }
     });
     
     messageBtn.addEventListener('click', function() {
-        alert('Message feature coming soon!');
+        console.log('Message feature coming soon!');
     });
     
     // Add hover effect to profile image
     const profileImage = document.querySelector('.profile-image');
     profileImage.addEventListener('click', function() {
-        this.classList.toggle('spin');
+        this.classList.add('spin');
+        setTimeout(() => this.classList.remove('spin'), 600);
     });
     
     // Add smooth counting animation to stats on load
